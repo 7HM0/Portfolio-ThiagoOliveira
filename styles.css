@@ -467,9 +467,8 @@ main { position: relative; z-index: 2; }
 }
 .contato__sub { color: var(--muted); font-size: 1.08rem; max-width: 480px; margin: 0 auto 34px; position: relative; }
 .contato__actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; position: relative; }
-.contato__socials { margin-top: 30px; color: var(--muted-2); display: flex; gap: 14px; justify-content: center; position: relative; }
-.contato__socials a { color: var(--muted); transition: color 0.25s; }
-.contato__socials a:hover { color: var(--accent); }
+.btn--wa svg { width: 20px; height: 20px; fill: currentColor; }
+.contato__wa { margin-top: 20px; color: var(--muted); font-family: "Sora", sans-serif; letter-spacing: 0.5px; position: relative; }
 
 /* ================= FOOTER ================= */
 .footer {

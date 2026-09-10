@@ -14,26 +14,26 @@
 const VIDEOS = [
   // ---- DR - VSL ----
   { id: "1xU6VFIcq7VG0mVGTBjvezqFAmAX11nzM", title: "App Loteria", cat: "vsl" },
-  { id: "1ffT5aarA9Wl6o3AU58wPtesz8tWPqXsw", title: "Diabetic", cat: "vsl" },
+  { id: "1ffT5aarA9Wl6o3AU58wPtesz8tWPqXsw", title: "Diabetes (EUA)", cat: "vsl" },
   { id: "1pGKmjEpL9XvZ57TYwMoNmMhecShsYX27", title: "Memória", cat: "vsl" },
-  { id: "1Ksa3OYUYc7dBvyR8PHE4FqTd4khIaUeC", title: "Memória (PT)", cat: "vsl" },
+  { id: "1Ksa3OYUYc7dBvyR8PHE4FqTd4khIaUeC", title: "Memória (PT-BR)", cat: "vsl" },
 
   // ---- DR - CRIATIVOS ----
-  { id: "1rWEiA6UhSUOpwp_SkTbqr6hjHM9BxBNP", title: "Criativo 01", cat: "criativos" },
-  { id: "186Bg0_MLT_lZ1cLBw69da00t95fWN0K9", title: "Criativo 02", cat: "criativos" },
-  { id: "1qnczMJHlY8vfF9qmbZqtO-fUedG337UR", title: "Criativo 03", cat: "criativos" },
-  { id: "1n2XhLYTJ5O_ygBgmXfZwpa1ixE9f7snN", title: "Criativo 04", cat: "criativos" },
-  { id: "1b_1iRNoH_twBos_gFzxOGCFkhzswujZ3", title: "Criativo 05", cat: "criativos" },
-  { id: "1_-kDDxWa8d05CNz6fSP4YM6Il1jvs_Tw", title: "Criativo 06", cat: "criativos" },
+  { id: "1rWEiA6UhSUOpwp_SkTbqr6hjHM9BxBNP", title: "Depoimento", cat: "criativos" },
+  { id: "186Bg0_MLT_lZ1cLBw69da00t95fWN0K9", title: "UGC · Emagrecimento", cat: "criativos" },
+  { id: "1qnczMJHlY8vfF9qmbZqtO-fUedG337UR", title: "Entrevista documental", cat: "criativos" },
+  { id: "1n2XhLYTJ5O_ygBgmXfZwpa1ixE9f7snN", title: "Demonstração de produto", cat: "criativos" },
+  { id: "1b_1iRNoH_twBos_gFzxOGCFkhzswujZ3", title: "Gancho estilo notícia", cat: "criativos" },
+  { id: "1_-kDDxWa8d05CNz6fSP4YM6Il1jvs_Tw", title: "Gancho de curiosidade", cat: "criativos" },
 
   // ---- INSTAGRAM / REELS ----
-  { id: "1S3KoD1kRXCcFVGdnSQOUQZfr3gvVuKr7", title: "Reel 01", cat: "reels" },
-  { id: "1iwsgmopLrXC2YIYXd7wucRCCQB_7LNng", title: "Reel 02", cat: "reels" },
+  { id: "1S3KoD1kRXCcFVGdnSQOUQZfr3gvVuKr7", title: "Talking head", cat: "reels" },
+  { id: "1iwsgmopLrXC2YIYXd7wucRCCQB_7LNng", title: "UGC vertical", cat: "reels" },
 
   // ---- TIKTOK SHOP ----
-  { id: "1dSYa7LOSmUt-F17rysznzl6HI2oMRIAI", title: "TikTok Shop 01", cat: "ttk" },
-  { id: "1ap-dKGuK05yyR5lQb-2d8Hm7tvFuft_1", title: "TikTok Shop 02", cat: "ttk" },
-  { id: "1Qeqy7hWglMrOVPnTXVdAblFsGqqkWBWV", title: "TikTok Shop 03", cat: "ttk" },
+  { id: "1dSYa7LOSmUt-F17rysznzl6HI2oMRIAI", title: "Produto · Cozinha", cat: "ttk" },
+  { id: "1ap-dKGuK05yyR5lQb-2d8Hm7tvFuft_1", title: "Produto · Casa", cat: "ttk" },
+  { id: "1Qeqy7hWglMrOVPnTXVdAblFsGqqkWBWV", title: "Produto em ação", cat: "ttk" },
 ];
 
 const CAT_LABEL = { vsl: "VSL", criativos: "Criativo", reels: "Reel", ttk: "TikTok Shop" };
