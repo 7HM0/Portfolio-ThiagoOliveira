@@ -578,10 +578,36 @@ main { position: relative; z-index: 2; }
   .gallery { column-count: 1; }
   .steps { grid-template-columns: 1fr; }
   .footer { flex-direction: column; gap: 14px; text-align: center; }
+
+  /* --- Player quase em tela cheia no celular --- */
+  .modal { padding: 0; }
+  .modal__box,
+  .modal__box.is-vertical {
+    max-width: 100%; width: 100%; height: 100%;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+  }
+  .modal__frame { width: 100%; max-height: 100vh; border-radius: 0; border: 0; }
+  .modal__box.is-vertical .modal__frame { width: auto; height: 86vh; max-height: 86vh; margin: 0 auto; }
+  .modal__close {
+    position: fixed; top: 12px; right: 12px;
+    width: 44px; height: 44px; font-size: 1.15rem;
+    background: rgba(13, 13, 16, 0.92); z-index: 5;
+  }
+  .modal__title {
+    position: fixed; left: 0; right: 0; bottom: 14px; margin: 0;
+    padding: 0 16px; font-size: 0.95rem; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
   .reveal { opacity: 1; transform: none; }
   html { scroll-behavior: auto; }
+}
+
+/* Telas de toque (sem hover): mostra o play e mantém a capa parada */
+@media (hover: none) {
+  .card__play { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  .card:hover .card__thumb { transform: none; }
 }
