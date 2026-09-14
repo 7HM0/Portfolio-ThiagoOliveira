@@ -7,7 +7,7 @@
    Para adicionar/editar um vídeo, é só mexer aqui:
    - id    : ID do arquivo no Google Drive (o que vem em /file/d/AQUI/view)
    - title : título que aparece no card
-   - cat   : "vsl" | "criativos" | "reels" | "ttk"
+   - cat   : "vsl" | "criativos" | "reels"
    O arquivo precisa estar compartilhado como
    "Qualquer pessoa com o link" para tocar no site.
    ----------------------------------------------------------- */
@@ -29,14 +29,9 @@ const VIDEOS = [
   // ---- INSTAGRAM / REELS ----
   { id: "1S3KoD1kRXCcFVGdnSQOUQZfr3gvVuKr7", title: "Talking head", cat: "reels" },
   { id: "1iwsgmopLrXC2YIYXd7wucRCCQB_7LNng", title: "UGC vertical", cat: "reels" },
-
-  // ---- TIKTOK SHOP ----
-  { id: "1dSYa7LOSmUt-F17rysznzl6HI2oMRIAI", title: "Produto · Cozinha", cat: "ttk" },
-  { id: "1ap-dKGuK05yyR5lQb-2d8Hm7tvFuft_1", title: "Produto · Casa", cat: "ttk" },
-  { id: "1Qeqy7hWglMrOVPnTXVdAblFsGqqkWBWV", title: "Produto em ação", cat: "ttk" },
 ];
 
-const CAT_LABEL = { vsl: "VSL", criativos: "Criativo", reels: "Reel", ttk: "TikTok Shop" };
+const CAT_LABEL = { vsl: "VSL", criativos: "Criativo", reels: "Reel" };
 
 const thumbUrl = (id) => `https://drive.google.com/thumbnail?id=${id}&sz=w1280`;
 const previewUrl = (id) => `https://drive.google.com/file/d/${id}/preview`;
