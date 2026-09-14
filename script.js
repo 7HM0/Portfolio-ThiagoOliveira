@@ -112,6 +112,10 @@ filters.addEventListener("click", (e) => {
   });
 });
 
+// Filtro inicial: abrir já em Criativos
+const initialFilter = filters.querySelector('.filter[data-filter="criativos"]');
+if (initialFilter) initialFilter.click();
+
 /* -----------------------------------------------------------
    MODAL / PLAYER
    ----------------------------------------------------------- */
