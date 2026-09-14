@@ -124,20 +124,42 @@ const modalBox = document.getElementById("modalBox");
 const modalFrame = document.getElementById("modalFrame");
 const modalTitle = document.getElementById("modalTitle");
 
+const isMobile = () => window.matchMedia("(max-width: 620px)").matches;
+let lastDims = [9, 16];
+
+// Dimensiona o player para caber na tela (largura E altura), em qualquer proporção
+function fitFrame(w, h) {
+  lastDims = [w, h];
+  modalBox.classList.toggle("is-vertical", h > w);
+  if (isMobile()) {
+    const ar = w / h;
+    const maxW = window.innerWidth * 0.96;
+    const maxH = window.innerHeight * 0.86;
+    let fw = maxW, fh = fw / ar;
+    if (fh > maxH) { fh = maxH; fw = fh * ar; }
+    modalFrame.style.aspectRatio = "";
+    modalFrame.style.width = Math.round(fw) + "px";
+    modalFrame.style.height = Math.round(fh) + "px";
+  } else {
+    modalFrame.style.width = "";
+    modalFrame.style.height = "";
+    modalFrame.style.aspectRatio = w + " / " + h;
+  }
+}
+
+window.addEventListener("resize", () => {
+  if (modal.classList.contains("is-open")) fitFrame(lastDims[0], lastDims[1]);
+});
+
 function openModal(v) {
   modalTitle.textContent = v.title;
 
-  // Detecta a proporção real pela miniatura para dimensionar o player
-  modalBox.classList.remove("is-vertical");
-  modalFrame.style.aspectRatio = "16 / 9";
+  // Dimensiona o player pela proporção real, sempre cabendo na tela
+  fitFrame(9, 16); // padrão vertical até a miniatura carregar
   const probe = new Image();
   probe.referrerPolicy = "no-referrer";
   probe.onload = () => {
-    const w = probe.naturalWidth, h = probe.naturalHeight;
-    if (w && h) {
-      modalFrame.style.aspectRatio = `${w} / ${h}`;
-      if (h > w) modalBox.classList.add("is-vertical");
-    }
+    if (probe.naturalWidth && probe.naturalHeight) fitFrame(probe.naturalWidth, probe.naturalHeight);
   };
   probe.src = thumbUrl(v.id);
 
